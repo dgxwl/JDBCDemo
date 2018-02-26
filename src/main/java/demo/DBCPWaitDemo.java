@@ -5,8 +5,12 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 import util.DBUtils;
-
-public class Demo4 {
+/**
+ * 连接池的排队等待
+ * @author Administrator
+ *
+ */
+public class DBCPWaitDemo {
 	public static void main(String[] args) {
 		Thread t1 = new DemoThread(5000);
 		Thread t2 = new DemoThread(6000);
