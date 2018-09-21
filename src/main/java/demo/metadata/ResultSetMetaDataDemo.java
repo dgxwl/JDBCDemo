@@ -1,4 +1,4 @@
-package demo;
+package demo.metadata;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
