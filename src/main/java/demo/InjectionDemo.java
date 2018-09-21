@@ -7,11 +7,11 @@ import java.util.Scanner;
 
 import util.DBUtils;
 /**
- * 不能防止sql注入
+ * Statement不能防止sql注入
  * @author Administrator
  *
  */
-public class LoginDemo {
+public class InjectionDemo {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("请输入用户名:");
@@ -24,6 +24,8 @@ public class LoginDemo {
 		} else {
 			System.out.println("登录失败");
 		}
+		
+		scanner.close();
 	}
 	
 	public static boolean login(String name, String password) {

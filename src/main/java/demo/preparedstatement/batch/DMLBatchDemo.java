@@ -1,4 +1,4 @@
-package demo;
+package demo.preparedstatement.batch;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -29,7 +29,7 @@ public class DMLBatchDemo {
 			ps.setInt(1, 3);
 			ps.setString(2, "3333");
 			ps.addBatch();
-			//批量执行一批参数
+			//批量执行DML语句
 			int[] arr = ps.executeBatch();
 			System.out.println(Arrays.toString(arr));
 		} catch (Exception e) {

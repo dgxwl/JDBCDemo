@@ -9,7 +9,7 @@ import util.DBUtils;
  * @author JAVA
  *
  */
-public class TransactDemo {
+public class TransactionDemo {
 	public static void main(String[] args) {
 		Connection conn = null;
 		try {
@@ -22,6 +22,7 @@ public class TransactDemo {
 			ps.setString(2, "wuber");
 			ps.setString(3, "123");
 			int n = ps.executeUpdate();
+			//提交事务
 			conn.commit();
 			System.out.println("成功执行:" + n);
 		} catch (Exception e) {

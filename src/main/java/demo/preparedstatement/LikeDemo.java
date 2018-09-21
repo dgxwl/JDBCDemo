@@ -1,23 +1,23 @@
-package demo;
+package demo.preparedstatement;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 
 import util.DBUtils;
 
-public class StatementDQLDemo2 {
+public class LikeDemo {
 	public static void main(String[] args) {
 		Connection conn = null;
 		try {
 			conn = DBUtils.getConnection();
-			String sql = "select * from demo_2";
-			Statement sta = conn.createStatement();
-			ResultSet rs = sta.executeQuery(sql);
+			String sql = "select name from t9 where name like ?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, "%d%");
+			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
-				int id = rs.getInt(1);
-				String name = rs.getString(2);
-				System.out.println(id + "~~" + name);
+				String name = rs.getString(1);
+				System.out.println(name);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

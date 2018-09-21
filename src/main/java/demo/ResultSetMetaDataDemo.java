@@ -7,6 +7,11 @@ import java.sql.Statement;
 
 import util.DBUtils;
 
+/**
+ * 执行语句时获得结果集的元数据
+ * @author Administrator
+ *
+ */
 public class ResultSetMetaDataDemo {
 	public static void main(String[] args) {
 		Connection conn = null;

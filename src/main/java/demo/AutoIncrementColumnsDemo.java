@@ -6,7 +6,12 @@ import java.sql.ResultSet;
 
 import util.DBUtils;
 
-public class AutoIncrementColsDemo {
+/**
+ * 插入时返回自增列的值
+ * @author Administrator
+ *
+ */
+public class AutoIncrementColumnsDemo {
 	public static void main(String[] args) {
 		Connection conn = null;
 		String sql = "insert into keywords values (null,?)";

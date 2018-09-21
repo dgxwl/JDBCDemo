@@ -45,7 +45,7 @@ class DemoThread extends Thread {
 				int id = rs.getInt(1);
 				String name = rs.getString(2);
 				String password = rs.getString(3);
-				System.out.println(id);
+				System.out.println(id + ", " + name + ", " + password);
 			}
 			Thread.sleep(wait);
 			System.out.println(getName() + "已结束");
